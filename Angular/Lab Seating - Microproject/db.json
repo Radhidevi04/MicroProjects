@@ -1,0 +1,46 @@
+{
+  "labs": [
+    {
+      "id": "01",
+      "stuRegno": "73772126101",
+      "stuName": "Aarthi K",
+      "stuRolno": "01",
+      "stuDept": "AIDS"
+    },
+    {
+      "id": "02",
+      "stuRegno": "73772126102",
+      "stuName": "Archana A M",
+      "stuRolno": "02",
+      "stuDept": "AIDS"
+    },
+    {
+      "id": "03",
+      "stuRegno": "73772126103",
+      "stuName": "Radhidevi K",
+      "stuRolno": "03",
+      "stuDept": "AIDS"
+    },
+    {
+      "id": "06",
+      "stuRegno": "73772126106",
+      "stuName": "Bhavatharany E",
+      "stuRolno": "06",
+      "stuDept": "AIDS"
+    },
+    {
+      "id": "07",
+      "stuRegno": "73772126107",
+      "stuName": "Navitha S",
+      "stuRolno": "07",
+      "stuDept": "AIDS"
+    },
+    {
+      "id": "08",
+      "stuRegno": "73772126108",
+      "stuName": "Gayathri",
+      "stuRolno": "08",
+      "stuDept": "AIDS"
+    }
+  ]
+}

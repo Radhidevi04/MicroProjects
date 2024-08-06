@@ -1,0 +1,11 @@
+.container{
+    border: 5px double black;
+    height: 700px;
+    width: 1000px;
+    position: absolute;
+    top: 10%;
+    right: 12%;
+    border-radius: 5px;
+    background-color: azure;
+    
+}

@@ -1,0 +1,10 @@
+.head{
+    border: 2px solid black;
+    height: 60px;
+    width: 1860px;
+    background-color:turquoise;
+    text-align: center;  
+}
+body{
+    background-color:beige;
+}

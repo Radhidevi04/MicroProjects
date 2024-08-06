@@ -1,0 +1,97 @@
+<div class="container">
+    <p>Student Details</p>
+    <br>
+        <div class="col-md-12">
+            <form #myForm = "ngForm">
+                <div class="form-group">
+                    <label for="System no"><b>System ID : </b></label>
+                    <input class="form-control" name="sysno" #sysno="ngModel" ngModel required pattern="[0-9]+"/>
+                    <div *ngIf="sysno.touched">
+                        <div *ngIf="sysno.errors?.['required']">
+                            <b style="color:red;"> * System ID required</b>
+                        </div>
+                        <div *ngIf="sysno.errors?.['pattern']">
+                            <b style="color: red;">System ID Invalid</b>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="Student reg.no"><b>Student regno : </b></label>
+                    <input class="form-control" name="stuRegno" #stuRegno="ngModel" ngModel required pattern="[0-9]+"/>
+                    <div *ngIf="stuRegno.touched">
+                        <div *ngIf="stuRegno.errors?.['required']">
+                            <b style="color:red;"> * Student regno required</b>
+                        </div>
+                        <div *ngIf="stuRegno.errors?.['pattern']">
+                            <b style="color: red;">Student regno Invalid</b>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="Student name"><b>Student name : </b></label>
+                    <input class="form-control" name="stuName" #stuName="ngModel" ngModel required pattern="[a-zA-Z][a-zA-z]+"/>
+                    <div *ngIf="stuName.touched">
+                        <div *ngIf="stuName.errors?.['required']">
+                            <b style="color:red;"> * Student name required</b>
+                        </div>
+                        <div *ngIf="stuName.errors?.['pattern']">
+                            <b style="color: red;">Student name Invalid</b>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="Student rollno"><b>Student rollno : </b></label>
+                    <input class="form-control" name="stuRolno" #stuRolno="ngModel" ngModel required pattern="[0-9]+"/>
+                    <div *ngIf="stuRolno.touched">
+                        <div *ngIf="stuRolno.errors?.['required']">
+                            <b style="color:red;"> * Student rollno required</b>
+                        </div>
+                        <div *ngIf="stuRolno.errors?.['pattern']">
+                            <b style="color: red;">Student rollno Invalid</b>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="Student dept"><b>Student dept : </b></label>
+                    <input class="form-control" name="stuDept" #stuDept="ngModel" ngModel required pattern="[a-zA-Z][a-zA-Z]+"/>
+                    <div *ngIf="stuDept.touched">
+                        <div *ngIf="stuDept.errors?.['required']">
+                            <b style="color:red;"> * Student dept required</b>
+                        </div>
+                        <div *ngIf="stuDept.errors?.['pattern']">
+                            <b style="color: red;">Student dept Invalid</b>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-success" (click)="insertlab(myForm.value)">Insert</button>&nbsp;&nbsp;
+                <button class="btn btn-primary" (click)="updatelab(myForm.value)">Update</button>&nbsp;&nbsp;
+                <button class="btn btn-danger" (click)="deletelab(myForm.value)">Delete</button>&nbsp;&nbsp;
+                <button class="btn btn-warning" (click)="findlab(myForm.value)">Find</button>
+                <br><br><button class="btn btn-info" (click)="findAlllab()">Find All</button>
+            </form>
+        </div>
+        <h6>{{result}}</h6>
+    </div>
+        <div style="width: 100%;" *ngIf="flag">
+            <table width="80%" align="center" class="table table-bordered">
+                <tr>
+                    <th>System no</th>
+                    <th>Student Regno</th>
+                    <th>Student Name</th>
+                    <th>Student Rolno</th>
+                    <th>Student dept</th>
+                </tr>
+                <tr *ngFor="let lab of labArr">
+                    <td> {{lab.id}}</td>
+                    <td>{{lab.stuRegno}}</td>
+                    <td>{{lab.stuName}}</td>
+                    <td>{{lab.stuRolno}}</td>
+                    <td>{{lab.stuDept}}</td>
+                </tr>
+            </table>
+        </div>
+
